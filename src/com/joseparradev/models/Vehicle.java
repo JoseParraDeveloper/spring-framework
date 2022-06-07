@@ -1,7 +1,7 @@
 package com.joseparradev.models;
 
 public abstract class Vehicle {
-	
+
 	private String nameCompany;
 	private String mailCompany;
 	private String functionVehicleCompany;
@@ -52,7 +52,6 @@ public abstract class Vehicle {
 		this.color = color;
 	}
 
-	public abstract String getcharacteristicsVehicle();
-
+	public abstract String getCharacteristicsVehicle();
 
 }
