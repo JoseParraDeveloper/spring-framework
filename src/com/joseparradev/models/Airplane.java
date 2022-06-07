@@ -2,11 +2,10 @@ package com.joseparradev.models;
 
 import com.joseparradev.interfaces.IEngine;
 
-public class Car extends VehicleWithEngine {
+public class Airplane extends VehicleWithEngine {
 
-	public Car(IEngine engine) {
+	public Airplane(IEngine engine) {
 		super(engine);
-
 	}
 
 	@Override
