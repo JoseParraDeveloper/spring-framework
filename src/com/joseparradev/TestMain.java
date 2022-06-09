@@ -20,9 +20,15 @@ public class TestMain {
 
 		ClassPathXmlApplicationContext contexto = new ClassPathXmlApplicationContext("applicationContext.xml");
 
-		Vehicle car = contexto.getBean("car", Car.class);
-		Vehicle truck = contexto.getBean("truck", Truck.class);
-		Vehicle airplane = contexto.getBean("airplane", Airplane.class);
+		Car car = contexto.getBean("car", Car.class);
+		car.setNumberEngine(2);
+		car.setColor("Azul");
+		Truck truck = contexto.getBean("truck", Truck.class);
+		truck.setNumberEngine(1);
+		truck.setColor("Rojo");
+		Airplane airplane = contexto.getBean("airplane", Airplane.class);
+		airplane.setNumberEngine(1);
+		airplane.setColor("Verde");
 
 		List<Vehicle> listVehicle = new ArrayList<>();
 		listVehicle.add(car);
