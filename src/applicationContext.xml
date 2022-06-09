@@ -6,8 +6,13 @@
 	http://www.springframework.org/schema/context 
 	http://www.springframework.org/schema/context/spring-context-3.1.xsd ">
 
+	<context:property-placeholder
+		location="classpath:dataCompany.properties" />
+
 	<!-- DEPENDENCY: ENGINE -->
 	<bean id="engineCar" class="com.joseparradev.models.EngineCar">
+
+
 
 	</bean>
 
@@ -24,14 +29,26 @@
 
 	<bean id="car" class="com.joseparradev.models.Car">
 		<constructor-arg ref="engineCar"></constructor-arg>
+		<property name="nameCompany" value="${nameCompany}"></property>
+		<property name="mailCompany" value="${email}"></property>
+		<property name="functionVehicleCompany"
+			value="${functionCar}"></property>
 	</bean>
 
 	<bean id="truck" class="com.joseparradev.models.Truck">
 		<constructor-arg ref="engineTruck"></constructor-arg>
+		<property name="nameCompany" value="${nameCompany}"></property>
+		<property name="mailCompany" value="${email}"></property>
+		<property name="functionVehicleCompany"
+			value="${functionTruck}"></property>
 	</bean>
 
 	<bean id="airplane" class="com.joseparradev.models.Airplane">
 		<constructor-arg ref="engineAirplane"></constructor-arg>
+		<property name="nameCompany" value="${nameCompany}"></property>
+		<property name="mailCompany" value="${email}"></property>
+		<property name="functionVehicleCompany"
+			value="${functionAirplane}"></property>
 	</bean>
 
 
